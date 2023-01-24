@@ -1,32 +1,18 @@
-
-# 
-
-## Description
+## README Generator
 
 
+### Description
+This is app builds a README file from a template based on the answers given via command line prompts.
 
-## Features
-
-
-
-## Table of Contents
-
-- [Description](#description)
-- [Features](#features)
-- [License](#license)
-- [Installation](#installation)
-- [Badges](#badges)
-- [Credits](#credits)
-Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-
-## Installation
+### Instructions
+Type "node index.js" to run the app.  Answer all of the questions and then the README file will be generated in the "Generated README" folder.
 
 
+### GitHub Repo
+The full repo is located at: https://github.com/Hezakai/READMEgenerator
 
-## Credits
+### Demo Video
+You can view the demo [here](https://drive.google.com/file/d/1xm54gE0jpv_YCHBftsTyanVqER9pYiUB/view)
 
-
-
-## License  ![License Badge](https://img.shields.io/badge/MIT-testmessage-blue)
-
-MIT LICENSE INFO
+### Demo README
+You can view the README created in the demo [here](./Assets/scripts/Generated%20README/README.md)
