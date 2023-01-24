@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+//Sets the license text based on the license chosen by the user
 function renderLicense(licName) {
   if (licName === "Apache license 2.0") {
     return ('Copyright 2022 Licensed under the Apache License, Version 2.0 the "License" you may not use this file except in compliance with the License.You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.'
@@ -18,6 +19,7 @@ function renderLicense(licName) {
   }
 }
 
+//Builds the license badge base on the license chosen by the user
 function renderBadge(licName) {
   if (licName === "Apache license 2.0") {
     return (
@@ -36,6 +38,7 @@ function renderBadge(licName) {
   }
 }
 
+//Sets the text used in the README for the contributions section based on whether or not the user wants contirubtions
 function renderContrib(contBool, email) {
   if (contBool == true) {
     return (
@@ -48,6 +51,7 @@ function renderContrib(contBool, email) {
   }
 }
 
+//The README template used
 const readmeGen = (answer) => {
   return `
 # ${answer.name} 
@@ -92,6 +96,7 @@ ${answer.tests}
 If you have any qestions please feel free to reach out to us via [GitHub](${answer.github}) or by e-mailing us at mailto:${answer.email}
 `};
 
+//console prompts for building the README
 inquirer
   .prompt([
     {
@@ -137,6 +142,7 @@ inquirer
     },
   ])
 
+  //pulls in the answers and writes the README file
   .then((answer) => {
     const readmeContent = readmeGen(answer);
     fs.writeFile("Generated README/README.md", readmeContent, (err) => err ? console.log(err) : console.log('Successfully created README file'));
