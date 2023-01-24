@@ -101,17 +101,17 @@ inquirer
   .prompt([
     {
       type: 'input',
-      message: 'What is your project name?',
+      message: 'What is the project name?',
       name: 'name',
     },
     {
       type: 'input',
-      message: 'Project Description? eg - What was your motivation? Why did you build this project? What problem does it solve? What did you learn?',
+      message: 'Write a bried project Description',
       name: 'description',
     },
     {
       type: 'input',
-      message: 'Steps for installation?',
+      message: 'PLease add the steps to install the project.',
       name: 'install',
     },
     {
@@ -121,18 +121,18 @@ inquirer
     },
     {
       type: 'list',
-      message: 'What license are you using?',
+      message: 'What license would you like to use?',
       name: 'license',
       choices: ['Apache license 2.0', 'MIT', 'GNU GENERAL PUBLIC LICENSE v3.0'],
     },
     {
       type: 'input',
-      message: 'GitHub URL?',
+      message: 'Please input your GitHub profile address for the contact section.',
       name: 'github',
     },
     {
       type: 'input',
-      message: 'Contact e-mail address?',
+      message: 'Please input your e-mail address for the contact section.',
       name: 'email',
     },
     {
