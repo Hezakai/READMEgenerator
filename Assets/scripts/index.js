@@ -139,5 +139,5 @@ inquirer
 
   .then((answer) => {
     const readmeContent = readmeGen(answer);
-    fs.writeFile("Generated README/README.md", readmeContent, (err) => err ? console.log(err) : console.log('Successfully created README file!'));
+    fs.writeFile("Generated README/README.md", readmeContent, (err) => err ? console.log(err) : console.log('Successfully created README file'));
   });
